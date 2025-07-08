@@ -64,3 +64,5 @@ packages/*/dist
 .husky/post*
 
 .next/
+
+.claude
