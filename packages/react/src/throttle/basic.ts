@@ -68,7 +68,9 @@ const getVisibleTextEveryNFrames = (
   }
 
   const avgTextAddedCount =
-    textAddedCounts.reduce((a, b) => a + b, 0) / textAddedCounts.length ?? 0;
+    textAddedCounts.length > 0
+      ? textAddedCounts.reduce((a, b) => a + b, 0) / textAddedCounts.length
+      : 0;
   const result =
     avgTextAddedCount > 0 ? windowFrames / avgTextAddedCount : windowFrames;
 
